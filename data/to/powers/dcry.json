@@ -1,0 +1,50 @@
+{
+    "name": "Immortal",
+    "description": "You cannot die, but only under the condition you were above 1 heart when getting hit.",
+    "type": "origins:multiple",
+    "prevent_death": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "*:*_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:prevent_death",
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "playsound minecraft:block.respawn_anchor.deplete master @a ~ ~ ~ 1 2"
+        }
+    },
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "hud_render": {
+            "should_render": false
+        }
+    },
+    "action_over_time": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:health",
+                "comparison": ">",
+                "compare_to": 2
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_resource",
+                "change": 1,
+                "operation": "add"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_resource",
+                "change": -1,
+                "operation": "add"
+            }
+        }
+    }
+}

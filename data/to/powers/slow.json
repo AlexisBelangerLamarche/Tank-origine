@@ -1,0 +1,9 @@
+{
+    "name": "Heavy",
+    "description": "Sprinting will drain hunger twice as fast and you will permanently have slowness 2.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 1.0
+    }
+}

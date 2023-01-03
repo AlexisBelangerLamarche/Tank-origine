@@ -1,0 +1,32 @@
+{
+    "name": "Fat",
+    "description": "Your 50% bigger",
+    "type": "origins:action_on_callback",
+    "entity_action_respawned": {
+        "type": "origins:and",
+    "actions": [
+        {
+            "type": "origins:execute_command",
+            "command":"scale set pehkui:height 1"
+        },
+        {    
+            "type": "origins:execute_command",
+            "command":"scale set pehkui:width 1.5"
+        }
+    ]
+    },
+    "entity_action_gained": {
+        "type": "origins:and",
+    "actions": [
+        {
+            "type": "origins:execute_command",
+            "command":"scale set pehkui:height 1"
+        },
+        {    
+            "type": "origins:execute_command",
+            "command":"scale set pehkui:width 1.5"
+        }
+    ]
+    },
+    "execute_chosen_when_orb": true
+}

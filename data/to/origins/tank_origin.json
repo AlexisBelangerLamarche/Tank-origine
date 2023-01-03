@@ -1,0 +1,21 @@
+{
+    "name": "Immortal",
+    "description": "Become almost invincible",
+    "powers": [
+        "to:ha",
+        "to:rage",
+        "to:nodmg",
+        "to:slow",
+        "to:slowt",
+        "to:noslep",
+        "to:nor",
+        "to:arw",
+        "to:sink",
+        "to:fat"
+    ],
+    "icon": {
+        "item": "minecraft:iron_chestplate"
+    },
+    "order": 5,
+    "impact": 3
+}

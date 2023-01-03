@@ -1,0 +1,59 @@
+{
+    "name": "Undying",
+    "description": "You gain resistance the lower your health gets",
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+            {
+                "condition": {
+                    "type": "origins:relative_health",
+                    "comparison": "<=",
+                    "compare_to": 0.30
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:resistance",
+                        "amplifier": 3,
+                        "duration": 40,
+                        "show_particles": false
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:relative_health",
+                    "comparison": "<=",
+                    "compare_to": 0.60
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:resistance",
+                        "amplifier": 1,
+                        "duration": 40,
+                        "show_particles": false
+                    }
+                }
+            },
+            {
+                "condition": {
+                    "type": "origins:relative_health",
+                    "comparison": "<=",
+                    "compare_to": 0.90
+                },
+                "action": {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:resistance",
+                        "amplifier": 0,
+                        "duration": 40,
+                        "show_particles": false
+                    }
+                }
+            }
+        ]
+    }
+}

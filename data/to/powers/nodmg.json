@@ -28,6 +28,13 @@
                         "amplifier": 250,
                         "show_particles": false,
                         "show_icon": true
+                    },
+                    {
+                        "effect": "minecraft:glow",
+                        "duration": 60,
+                        "amplifier": 0,
+                        "show_particles": false,
+                        "show_icon": true
                     }
                 ]
             },

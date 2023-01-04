@@ -30,7 +30,7 @@
                         "show_icon": true
                     },
                     {
-                        "effect": "minecraft:glow",
+                        "effect": "minecraft:glowing",
                         "duration": 60,
                         "amplifier": 0,
                         "show_particles": false,
